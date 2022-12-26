@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <div class="top-nav top-header sticky-header">
+    <div class="top-nav top-header sticky-header" style="background-color: #3A3A3C;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -108,7 +108,7 @@
                         </button>
 
                         <a href="{{ route('home') }}" class="web-logo nav-logo">
-                            <img src="../assets/images/logo/6.png" class="img-fluid blur-up lazyload" alt="">
+                            <img src="{{ asset('data/logo.jpeg') }}" class="img-fluid blur-up lazyload" alt="">
                         </a>
 
                         <div class="header-nav-middle">
@@ -122,32 +122,32 @@
                                     <div class="offcanvas-body">
                                         <ul class="navbar-nav">
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link" href="{{ route('home') }}">
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color: white;" href="{{ route('home') }}">
                                                     HOME
                                                 </a>
                                             </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link" href="javascript:void(0)">
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color: white;" href="javascript:void(0)">
                                                     DOG
                                                 </a>
                                             </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link" href="{{ route('kennel.index') }}">
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color: white;" href="{{ route('kennel.index') }}">
                                                     KENNELS
                                                 </a>
                                             </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link" href="javascript:void(0)">
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color: white;" href="javascript:void(0)">
                                                     PEDIGREE
                                                 </a>
                                             </li>
 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link" href="{{ route('contact.index') }}">
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color: white;" href="{{ route('contact.index') }}">
                                                     CONTACT
                                                 </a>
                                             </li>

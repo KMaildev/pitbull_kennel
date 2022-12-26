@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dog;
 use App\Models\DogBreedGroup;
 use Illuminate\Http\Request;
 
@@ -48,7 +49,9 @@ class KennelController extends Controller
      */
     public function show($id)
     {
-        //
+        $dog_breed_group = DogBreedGroup::findOrFail($id);
+        $dogs = Dog::where('dog_breed_group_id', $id)->get();
+        return view('frontend.kennel.show', compact('dogs', 'dog_breed_group'));
     }
 
     /**
