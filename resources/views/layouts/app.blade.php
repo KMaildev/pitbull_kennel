@@ -44,7 +44,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bulk-style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/animate.css') }}">
 
-
     <!-- Template css -->
     <link id="color-link" rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
@@ -107,8 +106,8 @@
     <script src="{{ asset('assets/js/fly-cart.js') }}"></script>
 
     <!-- Timer Js -->
-    <script src="{{ asset('assets/js/timer1.js') }}"></script>
-    <script src="{{ asset('assets/js/timer2.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/timer1.js') }}"></script>
+    <script src="{{ asset('assets/js/timer2.js') }}"></script> --}}
 
     <!-- Copy clipboard Js -->
     <script src="{{ asset('assets/js/clipboard.min.js') }}"></script>
