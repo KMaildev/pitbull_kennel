@@ -98,7 +98,7 @@
                                         <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="offcanvas-body">
+                                    <div class="offcanvas-body" style="background-color: #3A3A3C">
                                         <ul class="navbar-nav">
 
                                             <li class="nav-item">
