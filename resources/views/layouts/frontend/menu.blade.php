@@ -2,10 +2,19 @@
     <div class="header-top">
         <div class="container-fluid-lg">
             <div class="row">
-                <div class="col-xxl-3 d-xxl-block d-none">
+
+                <div class="col-xxl-4 d-xxl-block d-none">
                     <div class="top-left-header">
-                        <i class="iconly-Location icli text-white"></i>
-                        <span class="text-white">1418 Riverwood Drive, CA 96052, US</span>
+                        <i class="fa fa-phone text-white"></i>
+                        <span class="text-white">
+                            09-73029482,
+                        </span>
+                        <span class="text-white">
+                            09-264265266,
+                        </span>
+                        <span class="text-white">
+                            09-455455007
+                        </span>
                     </div>
                 </div>
 
@@ -15,8 +24,9 @@
                             <div>
                                 <div class="timer-notification">
                                     <h6>
-                                        <strong class="me-1">Welcome to Fastkart!</strong>Wrap new offers/gift
-                                        every signle day on Weekends.<strong class="ms-1">New Coupon Code: Fast024
+                                        <strong class="me-1">
+                                            We believe that puppies should never be kept in cages in pet shops, waiting
+                                            to be sold.
                                         </strong>
                                     </h6>
                                 </div>
@@ -24,9 +34,11 @@
 
                             <div>
                                 <div class="timer-notification">
-                                    <h6>Something you love is now on sale!
-                                        <a href="shop-left-sidebar.html" class="text-white">Buy Now
-                                            !</a>
+                                    <h6>
+                                        Dog you love is now on sale!
+                                        <a href="{{ route('dog.index') }}" class="text-white">
+                                            Buy Now!
+                                        </a>
                                     </h6>
                                 </div>
                             </div>
@@ -34,57 +46,24 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <ul class="about-list right-nav-about">
                         <li class="right-nav-list">
                             <div class="dropdown theme-form-select">
                                 <button class="btn dropdown-toggle" type="button" id="select-language"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/images/country/united-states.png"
+                                    <img src="{{ asset('assets/images/country/united-states.png') }}"
                                         class="img-fluid blur-up lazyload" alt="">
                                     <span>English</span>
                                 </button>
+
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
                                     <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="english">
-                                            <img src="../assets/images/country/united-kingdom.png"
+                                            <img src="{{ asset('assets/images/country/united-kingdom.png') }}"
                                                 class="img-fluid blur-up lazyload" alt="">
                                             <span>English</span>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0)" id="france">
-                                            <img src="../assets/images/country/germany.png"
-                                                class="img-fluid blur-up lazyload" alt="">
-                                            <span>Germany</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="javascript:void(0)" id="chinese">
-                                            <img src="../assets/images/country/turkish.png"
-                                                class="img-fluid blur-up lazyload" alt="">
-                                            <span>Turki</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="right-nav-list">
-                            <div class="dropdown theme-form-select">
-                                <button class="btn dropdown-toggle" type="button" id="select-dollar"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>USD</span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end sm-dropdown-menu"
-                                    aria-labelledby="select-dollar">
-                                    <li>
-                                        <a class="dropdown-item" id="aud" href="javascript:void(0)">AUD</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" id="eur" href="javascript:void(0)">EUR</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" id="cny" href="javascript:void(0)">CNY</a>
                                     </li>
                                 </ul>
                             </div>
@@ -129,26 +108,36 @@
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" style="color: white;" href="javascript:void(0)">
+                                                <a class="nav-link" style="color: white;"
+                                                    href="{{ route('dog.index') }}">
                                                     DOG
                                                 </a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" style="color: white;" href="{{ route('kennel.index') }}">
+                                                <a class="nav-link" style="color: white;"
+                                                    href="{{ route('kennel.index') }}">
                                                     KENNELS
                                                 </a>
                                             </li>
 
                                             <li class="nav-item">
+                                                <a class="nav-link" style="color: white;"
+                                                    href="{{ route('faq.index') }}">
+                                                    FAQS
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item" hidden>
                                                 <a class="nav-link" style="color: white;" href="javascript:void(0)">
                                                     PEDIGREE
                                                 </a>
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link" style="color: white;" href="{{ route('contact.index') }}">
-                                                    CONTACT
+                                                <a class="nav-link" style="color: white;"
+                                                    href="{{ route('contact.index') }}">
+                                                    CONTACT US
                                                 </a>
                                             </li>
 
@@ -159,15 +148,17 @@
                         </div>
 
                         <div class="rightside-box" style="width: 40%;">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button"
-                                        style="background-color: rgb(228, 221, 21);">
-                                        Search
-                                    </button>
+                            <form action="{{ route('dog.index') }}" method="get">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search" name="q">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit"
+                                            style="background-color: rgb(228, 221, 21);">
+                                            Search
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

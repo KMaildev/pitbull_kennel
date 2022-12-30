@@ -55,126 +55,135 @@
                                         <tbody>
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px; width: 50%;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px; width: 50%;">
                                                     NAME :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->name ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     BREED :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->breed ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     SEX :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->sex ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     COLOR :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->color ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     DATE OF BIRTH :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->date_of_birth ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     BREEDER :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->breeder ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     OWNER :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->owner ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     REG NO :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->reg_no ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     REGISTERED :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->registered ?? '' }}
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td
-                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: #7DBA44; text-align: left; font-weight: bold; font-size: 18px;">
                                                     REGISTRAR :
                                                 </td>
                                                 <td
-                                                    style="color: white; text-align: left; font-weight: bold; font-size: 20px;">
+                                                    style="color: white; text-align: left; font-weight: bold; font-size: 18px;">
                                                     {{ $dog->registrar ?? '' }}
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-
                             </div>
                         </div>
 
+
+                        @if ($dog->video)
+                            <div class="col-md-6 col-lg-6 col-sm-6 py-5">
+                                <video width="100%" height="240" controls>
+                                    <source src="{{ $dog->video }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        @endif
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
+
+    @include('frontend.dog.related_dogs')
 @endsection
 
 @section('script')
