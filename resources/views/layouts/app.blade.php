@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mingalapar Pitbull Kennel @yield('title')</title>
 
+    <meta name="keywords" content="Mingalapar Pitbull Kennel" />
+    <meta property="og:title" content="Mingalapar Pitbull Kennel" />
+    <meta property="og:image" content="{{ asset('data/logo.jpeg') }}" />
+    <meta property="og:url" content="http://greenpalaceoasismm.com/" />
+    <meta property="og:site_name" content="Mingalapar Pitbull Kennel" />
+    <link rel="icon" type="image/png" href="{{ asset('data/logo.jpeg') }}">
+
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
@@ -50,6 +57,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .hover:hover {
+            background-color: #7DBA44;
+        }
+    </style>
 </head>
 
 <body class="theme-color-3 dark">
@@ -60,6 +73,8 @@
         @include('layouts.frontend.slider')
     @endif
 
+
+    @include('layouts.frontend.alert')
 
     @yield('content')
 

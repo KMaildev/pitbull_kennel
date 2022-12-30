@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\DogController;
 use App\Http\Controllers\Frontend\FaqController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\KennelController;
+use App\Http\Controllers\Frontend\OrderController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,3 +14,4 @@ Route::resource('kennel', KennelController::class);
 Route::resource('dog', DogController::class);
 Route::resource('faq', FaqController::class);
 Route::resource('contact', ContactController::class);
+Route::resource('order', OrderController::class);

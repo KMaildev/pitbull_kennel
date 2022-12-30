@@ -60,7 +60,7 @@
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="select-language">
                                     <li>
                                         <a class="dropdown-item" href="javascript:void(0)" id="english">
-                                            <img src="{{ asset('assets/images/country/united-kingdom.png') }}"
+                                            <img src="{{ asset('assets/images/country/united-states.png') }}"
                                                 class="img-fluid blur-up lazyload" alt="">
                                             <span>English</span>
                                         </a>

@@ -165,6 +165,14 @@
                                         </tbody>
                                     </table>
                                 </div>
+
+                                <div class="note-box product-packege">
+                                    <button class="btn btn-md bg-dark cart-button text-white w-100" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        <i class="fa fa-cart"></i>
+                                        Order Now
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -184,7 +192,139 @@
     </section>
 
     @include('frontend.dog.related_dogs')
-@endsection
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form autocomplete="off" action="{{ route('order.store') }}" method="POST" id="create-form">
+                    @csrf
+                    <input type="hidden" value="{{ $dog->id }}" name="dog_id">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            {{ $dog->name ?? '' }}
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput" class="form-label">
+                                        Name
+                                    </label>
+                                    <div class="custom-input">
+                                        <input type="text" class="form-control" placeholder="Your Name*"
+                                            value="{{ old('name') }}" name="name">
+                                        @error('name')
+                                            <div class="form-control-feedback" style="color: red;">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput2" class="form-label">
+                                        Email Address
+                                    </label>
+                                    <div class="custom-input">
+                                        <input type="email" class="form-control" value="{{ old('email') }}"
+                                            placeholder="Enter Email Address" name="email">
+                                        @error('email')
+                                            <div class="form-control-feedback" style="color: red;">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
+                                    <div class="custom-input">
+                                        <input type="tel" class="form-control" value="{{ old('phone') }}"
+                                            placeholder="Enter Phone Number" name="phone">
+                                        @error('phone')
+                                            <div class="form-control-feedback" style="color: red;">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput1" class="form-label">
+                                        Location (City, Country)
+                                    </label>
+                                    <div class="custom-input">
+                                        <input type="text" class="form-control" value="{{ old('location') }}"
+                                            placeholder="Location (City, Country)" name="location">
+                                        @error('location')
+                                            <div class="form-control-feedback" style="color: red;">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-12 col-lg-12 col-sm-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput1" class="form-label">
+                                        Payment Option
+                                    </label>
+                                    <div class="custom-input">
+                                        <select class="form-select" aria-label="Default select example"
+                                            name="payment_option">
+                                            <option selected value="">--Select Payment Option--</option>
+                                            <option value="Cash On Delivery">Cash On Delivery</option>
+                                            <option value="KPay">KPay</option>
+                                            <option value="AYA Bank">AYA Bank</option>
+                                            <option value="KBZ Bank">KBZ Bank</option>
+                                            <option value="CB Bank">CB Bank</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlTextarea" class="form-label">
+                                        Additional Note
+                                    </label>
+                                    <div class="custom-textarea">
+                                        <textarea class="form-control" id="exampleFormControlTextarea" placeholder="Enter Your Additional Note"
+                                            rows="6" name="additional_note">{{ old('additional_note') }}</textarea>
+                                    </div>
+                                    @error('additional_note')
+                                        <div class="form-control-feedback" style="color: red;">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-animation btn-md fw-bold ms-auto">
+                            Apply Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection
 @section('script')
+    {!! JsValidator::formRequest('App\Http\Requests\StoreOrder', '#create-form') !!}
 @endsection
